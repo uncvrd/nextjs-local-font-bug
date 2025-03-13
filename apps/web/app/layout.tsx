@@ -11,7 +11,7 @@ export const helveticaNeue = localFont({
 const pxGrotesk = localFont({
     src: [
         { path: "../styles/px-grotesk/light.ttf", weight: "100" },
-        { path: "../styles/px-grotesk/test.ttf", weight: "400" },
+        { path: "../styles/px-grotesk/regular.ttf", weight: "400" },
     ],
     variable: "--font-px-grotesk",
 });
