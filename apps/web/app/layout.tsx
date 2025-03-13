@@ -1,30 +1,31 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 
-import "@workspace/ui/globals.css"
-import { Providers } from "@/components/providers"
+import { Providers } from "@/components/providers";
 
-const fontSans = Geist({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
+export const helveticaNeue = localFont({
+    src: [{ path: "../styles/helvetica-neue/regular.ttf" }],
+    variable: "--font-helvetica-neue",
+});
 
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+const pxGrotesk = localFont({
+    src: [
+        { path: "../styles/px-grotesk/light.ttf", weight: "100" },
+        { path: "../styles/px-grotesk/test.ttf", weight: "400" },
+    ],
+    variable: "--font-px-grotesk",
+});
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased `}
-      >
-        <Providers>{children}</Providers>
-      </body>
-    </html>
-  )
+    return (
+        <html lang="en" suppressHydrationWarning>
+            <body className={`${helveticaNeue.variable} ${pxGrotesk.variable} font-sans antialiased `}>
+                <Providers>{children}</Providers>
+            </body>
+        </html>
+    );
 }

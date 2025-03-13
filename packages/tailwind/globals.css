@@ -1,0 +1,177 @@
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+    --accent-magenta: oklch(51.18% 0.1587 339.71);
+    --accent-orange: oklch(67.2% 0.1752 29.45);
+    --accent-purple: oklch(54.04% 0.1478 296.87);
+    --accent-yellow: oklch(80.49% 0.1272 77.15);
+
+    --background-primary: oklch(97.99% 0.0011 17.18);
+    --background-secondary: oklch(100% 0 0);
+
+    --bright: oklch(70.22% 0.1556 272.5);
+
+    --core: oklch(92.19% 0 0);
+
+    --core-accent: oklch(85.76% 0 0);
+
+    --core-accent-hover: oklch(85.76% 0 0);
+
+    --core-hover: oklch(92.19% 0 0);
+
+    --cta: oklch(70.22% 0.1556 272.5);
+
+    /* TODO: need cta-hover */
+    --cta-hover: oklch(80.09% 0.1373 151.16);
+
+    --delete: oklch(71.22% 0.1649 22.15);
+
+    /* TODO: need semantic-error */
+    --semantic-error: oklch(62.8% 0.2577 29.23);
+
+    --text-primary: oklch(35.44% 0.0134 189.2);
+    --text-secondary: oklch(64.67% 0 0);
+}
+
+.dark {
+    /* TODO: need accent-magenta */
+    --accent-magenta: oklch(51.18% 0.1587 339.71);
+    /* TODO: need accent-orange */
+    --accent-orange: oklch(67.2% 0.1752 29.45);
+    /* TODO: need accent-purple */
+    --accent-purple: oklch(54.04% 0.1478 296.87);
+    /* TODO: need accent-yellow */
+    --accent-yellow: oklch(80.49% 0.1272 77.15);
+
+    --background-primary: oklch(26.28% 0.0141 188.82);
+    --background-secondary: oklch(22.6% 0.0134 187.44);
+
+    --bright: oklch(89.56% 0.0712 153.51);
+
+    --core: oklch(35.44% 0.0134 189.2);
+
+    --core-accent: oklch(42.21% 0.0129 189.37);
+
+    --core-accent-hover: oklch(51.03% 0.0147 190.61);
+
+    --core-hover: oklch(42.33% 0.0165 190.86);
+
+    --cta: oklch(69.71% 0.1371 150.3);
+
+    --cta-hover: oklch(80.09% 0.1373 151.16);
+
+    --delete: oklch(71.22% 0.1649 22.15);
+
+    --semantic-error: oklch(62.8% 0.2577 29.23);
+
+    --text-primary: oklch(97.99% 0.0011 17.18);
+    --text-secondary: oklch(64.67% 0 0);
+}
+
+@layer base {
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+@theme inline {
+    --*: initial;
+
+    --aspect-video: 16 / 9;
+
+    --breakpoint-sm: 40rem;
+    --breakpoint-md: 48rem;
+    --breakpoint-lg: 64rem;
+    --breakpoint-xl: 80rem;
+    --breakpoint-2xl: 96rem;
+
+    --color-accent-magenta: var(--accent-magenta);
+    --color-accent-orange: var(--accent-orange);
+    --color-accent-purple: var(--accent-purple);
+    --color-accent-yellow: var(--accent-yellow);
+
+    --color-background-primary: var(--background-primary);
+    --color-background-secondary: var(--background-secondary);
+
+    --color-bright: var(--bright);
+
+    --color-core: var(--core);
+
+    --color-core-accent: var(--core-accent);
+
+    --color-core-accent-hover: var(--core-accent-hover);
+
+    --color-core-hover: var(--core-hover);
+
+    --color-cta: var(--cta);
+
+    --color-cta-hover: var(--cta-hover);
+
+    --color-delete: var(--delete);
+
+    --color-semantic-error: var(--semantic-error);
+
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+
+    --container-3xs: 16rem;
+    --container-2xs: 18rem;
+    --container-xs: 20rem;
+    --container-sm: 24rem;
+    --container-md: 28rem;
+    --container-lg: 32rem;
+    --container-xl: 36rem;
+    --container-2xl: 42rem;
+    --container-3xl: 48rem;
+    --container-4xl: 56rem;
+    --container-5xl: 64rem;
+    --container-6xl: 72rem;
+    --container-7xl: 80rem;
+
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+    --font-sans: var(--font-helvetica-neue);
+    --font-serif: var(--font-px-grotesk);
+
+    --font-weight-regular: 400;
+    --font-weight-thin: 300;
+
+    --radius-xs: 0.125rem;
+    --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
+    --radius-4xl: 2rem;
+
+    --shadow-md: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
+
+    --spacing: 0.25rem;
+
+    --text-2xl: 1.5rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    --text-6xl: 6rem;
+    --text-7xl: 4rem;
+    --text-9xl: 8rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-sm: 0.875rem;
+    --text-xs: 0.75rem;
+    --text-xxs: 0.625rem;
+
+    --tracking-normal: 0em;
+    --tracking-tight: -0.02em;
+    --tracking-tighter: -0.04em;
+}
+
+@utility container {
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}

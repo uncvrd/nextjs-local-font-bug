@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@import "@workspace/tailwind/globals";
+
+/* Makes sure to scan the ui library for css classes */
+@source "../../../packages/ui";
+
+@layer components {
+    /* Form */
+
+    .form-container {
+        @apply grid grid-cols-2 gap-4;
+    }
+
+    /* Info Page */
+
+    .info-page-content {
+        @apply container py-9;
+    }
+
+    .info-page-header {
+        @apply bg-background-secondary py-6;
+    }
+
+    .info-page-header-container {
+        @apply container space-y-8;
+    }
+
+    .info-page-module-grid {
+        @apply grid grid-cols-1 gap-6 md:grid-cols-2;
+    }
+
+    /* Card */
+
+    /* TODO: figure out how to add group hover group not allowed here */
+    .card-container {
+        @apply bg-background-secondary rounded-xl p-3;
+    }
+
+    .card-image {
+        @apply rounded-md;
+    }
+
+    /* Chart */
+
+    .chart-tooltip-content {
+        @apply bg-core min-w-[fit-content] rounded-md border-none px-3 py-2;
+    }
+
+    /* Menu */
+
+    .menu-icon {
+        @apply mr-2.5 size-3;
+    }
+}
